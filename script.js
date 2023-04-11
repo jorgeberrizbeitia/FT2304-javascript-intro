@@ -384,3 +384,67 @@ switch(color) {
     console.log("no conozco ese color :(")
 }
 
+
+
+// Truthy y Falsy
+
+
+// if ( 30 === 30 ) {
+//   console.log("esto se imprimirá?")
+// }
+
+// if ( 30 ) {
+//   console.log("esto se imprimirá?")
+// }
+
+if ( 0 ) {
+  console.log("esto se imprimirá?")
+}
+
+// .todos los valores de JS tienen un aspecto que asemeja true o false
+
+// 0 es Falsy
+// cualquier otro numero es Thruthy
+
+// .todos estos valores son falsy
+if (0 || "" || undefined || null || NaN || false ) {
+  console.log("esto nunca se imprimirá")
+}
+
+let money = 20;
+
+if (money) {
+  console.log(`tienes ${money} euros en tu cuenta`)
+} else {
+  console.log("no tienes dinero, te lo gastaste en NFTs")
+}
+
+// Bucle FOR
+
+// sintaxis
+// for ( variable control; condicion; expresion final ) {
+  // el codigo a ejecutar X cantidad de veces
+// }
+
+
+
+for ( let patata = 0; patata < 10; patata = patata + 1 ) {
+  // let patata = 0 // ESTO OCURRE UNA SOLA VEZ. AL INICIO DEL BUCLE
+
+  // if (patata < 10) continua el bucle. ESTO OCURRE AL INICIO DE CADA ITERACION DEL BUCLE
+  // si es false, sal del bucle.
+
+  console.log("ejecutando la patata", patata)
+
+
+  // ....
+  // patata = patata + 1 // ESTO SE EJECUTA AL FINAL DE CADA ITERACION DEL BUCLE.
+  // luego vuelve a empezar
+}
+
+// console.log(patata) // solo se usa para el bucle, no tenemos acceso fuera de el bucle
+
+
+for (let i = 0; i < 20; i += 5) {
+  console.log("nuevo bucle")
+}
