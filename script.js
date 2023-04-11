@@ -246,3 +246,141 @@ let random10 = Math.random() * 10 // 0 - 10
 console.log( Math.floor(random10) ) // 0 - 10 sin decimales
 
 console.log( Math.floor( Math.random() * 100 )) // en una misma linea 0 - 100
+
+
+// BOLEANOS
+
+let posBool = true;
+let negBool = false;
+
+console.log(posBool, negBool)
+
+
+// Operador NOT => hace el boleano opuesto
+
+console.log( !posBool )
+console.log( !negBool )
+
+
+// Operadores de comparación ===
+
+let food1 = "pizza";
+let food2 = "pasta";
+let food3 = "Pizza";
+
+console.log( food1 === food2 );
+console.log( food1 === food3 );
+console.log( food1 !== food2);  // true
+
+console.log( 12 > 15 )
+console.log( 12 < 15 )
+console.log( 12 >= 12 )
+console.log( 12 <= 12 )
+
+
+console.log( "a" < "f" ) // usa los codigos ASCII. 97 < 102
+// usado para ordenar alfabeticamente
+
+
+// === y !== son comparaciones estrictas. Comparan el valor y comparan el tipo de data.
+
+console.log("5" === "5")
+console.log("5" === 5) // falso porque tienen tipo de data diferente
+
+// == y != son comparaciones no estrictas. Comparan solo valor haciendo coercion.
+
+console.log( "5" == 5 ) // true. 
+console.log( "5" == 20 ) // false. 
+
+
+// Operadores logicos. 
+// && para Y
+// || para O
+
+
+console.log( "manzana" === "pera" && "tomate" === "tomate" )
+// todas las condiciones deben ser true para que toda la operacion sea true
+
+console.log( "manzana" === "pera" || "tomate" === "tomate" )
+// si al menos una de las condiciones es true toda la operacion es true
+
+
+// Guess the console input for each console.log
+
+// Part 1.
+
+console.log(true && false); // false
+console.log(11 % 3 === 2); // true
+console.log(false || true); // true
+console.log(!true || false); // false
+console.log(17 == '17'); // true
+console.log(123 === '123'); // false
+console.log('Hello' - 'llo'); // NaN
+
+// Part 2.
+
+let statement = 'i love javaScript!';
+
+console.log(statement.indexOf("I")) // -1. Significa que no está
+
+let subStatement = statement.slice(7, -1);
+console.log(subStatement);
+
+console.log(statement[0].toUpperCase()) 
+
+statement.toUpperCase();
+console.log(statement); 
+
+
+// CONDICIONALES
+
+let naranjas = undefined;
+
+// if (/* condicion que evalue como booleano */) {
+   // .todo lo que va a ocurrir si la condicion es true
+// }
+
+// if (naranjas < 0) {
+//   console.log("puedes hacer zumo negativo. bajo en calorias")
+// }
+
+// if (naranjas === 0) {
+//   console.log("No tienes naranjas para hacer zumo")
+// }
+
+// if (naranjas > 0 && naranjas <= 5) {
+//   console.log("tienes suficientes naranjas para un zumo")
+// }
+
+// if (naranjas > 5) {
+//   console.log("tienes suficientes naranjas para muchos zumos")
+// }
+
+if (naranjas === 0) {
+  console.log("No tienes naranjas para hacer zumo")
+  // si JS determina una condicion true, deja de revisar las siguientes.
+} else if (naranjas > 0 && naranjas <= 5) {
+  console.log("tienes suficientes naranjas para un zumo")
+} else if (naranjas > 5) {
+  console.log("tienes suficientes naranjas para muchos zumos")
+} else {
+  console.log("no entiendo cual es el valor de naranjas")
+}
+
+
+// Condicionales de tipo switch
+
+let color = "blue";
+
+switch(color) {
+  case "amarillo":
+    console.log("cosas de color amarillo: bananas, el sol, los simpsons");
+    break;
+  case "naranja":
+    console.log("cosas de color naranja: naranjas, mandarinas...");
+    break;
+  default: 
+    // en cualquier otro caso.
+    console.log("no conozco ese color :(")
+}
+
