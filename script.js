@@ -448,3 +448,68 @@ for ( let patata = 0; patata < 10; patata = patata + 1 ) {
 for (let i = 0; i < 20; i += 5) {
   console.log("nuevo bucle")
 }
+
+
+
+let lyrics = "Around the World, Around the World, Around the World, Around the World, Around the World, Around the World, Around the World, Around the World, Around the World, Around the World, Around the World, Around the World, Around the World, Around the World, Around the World, Around the World, Around the World, Around the World, Around the World, Around the World"
+
+let counterComas = 0;
+
+for (let i = 0; i < lyrics.length; i++) {
+  // console.log("bucle por los caracteres de lyrics", i)
+
+  // console.log( lyrics[i] )
+  if ( lyrics[i] === "," ) {
+    // console.log("consegui una coma")
+    counterComas = counterComas + 1
+  }
+
+}
+
+// ejemplo for for of loop
+// for ( let character of lyrics ) {
+//   if (character === ",") {
+//     counterComas++
+//   }
+// }
+
+
+console.log( `en el lyrics hay ${counterComas} cantidad de commas` )
+
+
+// BUCLES FOR OF
+let newString = "hola"; 
+
+
+for (let character of newString) {
+  console.log(character)
+}
+
+
+
+// break y continue
+
+let numStr = "32000450060770X5555000033004";
+
+
+// 1. quiero crear un nuevo string con solo los numeros 0;
+// 2. cuando consigas la letra X. No sigas agregando los 0;
+let newNumStr = "";
+
+for ( let char of numStr ) {
+  console.log(char)
+
+  if (char === "X") {
+    // quiero detener todo el bucle
+    break
+  }
+
+  if (char !== "0") {
+    // quiero detener la iteración
+    continue
+  }
+
+  newNumStr = newNumStr + char
+}
+
+console.log(newNumStr)
