@@ -41,8 +41,8 @@ let hobbyCopy = myOtherHobby;
 
 // cosas que no podemos o no debemos hacer para nombrar variables
 
-// let 1fruta;
-let fruit1;
+// let 1fruta; // NO
+// let fruit1; // SI
 
 // let import;
 // let break;
@@ -97,4 +97,75 @@ let variable7 = [];
 console.log(variable7, typeof variable7)
 
 let variable8 = {};
-console.log(variable8, typeof variable8)
+
+
+
+// STRINGS
+
+let fruit1 = "pera";
+let fruit2 = "manzana";
+let fruit3 = "tomate";
+
+
+let recipe = "La receta para el smoothie es: " + fruit1 + ", " + fruit2 + " y " + fruit3;
+
+console.log(recipe);
+
+// interpolación de strings => `` backticks
+
+let recipeBetter = `La receta para el smoothie es: ${fruit1}, ${fruit2} y ${fruit3}`;
+console.log(recipeBetter)
+
+
+// INDICES
+
+let simpleWord = "holagiqbwjhabjdgeygeiygfigyaifg";
+//                ||||
+//                0123
+
+// notación de corchetes
+console.log( simpleWord[0] )
+console.log( simpleWord[3] )
+
+console.log( simpleWord.charAt(0) ) // otra forma de acceder a caracteres
+
+// propiedad length => cantidad de caracteres en un string
+
+console.log( simpleWord.length )
+
+console.log( simpleWord[ simpleWord.length - 1 ] )
+
+// indexOf => para buscar la posición de un caracter
+
+console.log( simpleWord.indexOf("e") )
+
+// Otros metodos de strings
+
+let longWord = "bananaramawakawakaehehsamirarami"
+
+
+// slice => hace una copia de una sección del string
+
+console.log( longWord.slice(0, 6) )
+console.log( longWord.slice(12, 16) )
+
+let strSlice = longWord.slice(12, 16)
+
+// console.log( strSlice.toUpperCase() )
+
+let strSliceUpperCase = strSlice.toUpperCase()
+
+
+console.log( strSliceUpperCase.repeat(20) )
+
+// o encadenar metodos
+// console.log( longWord.slice(12, 16).toUpperCase().repeat(20) )
+
+let name = "bob";
+
+let nameCapitalized = name[0].toUpperCase() + name.slice(1)
+
+console.log(nameCapitalized)
+
+
+
