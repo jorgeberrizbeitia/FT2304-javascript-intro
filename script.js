@@ -168,4 +168,81 @@ let nameCapitalized = name[0].toUpperCase() + name.slice(1)
 console.log(nameCapitalized)
 
 
+// NUMBERS
 
+
+let posNum = 5;
+let negNum = -10;
+let decNum = 10.7249346732;
+
+console.log(posNum, negNum, decNum)
+
+
+// operaciones matematicas
+
+let num1 = 6;
+let num2 = 2;
+
+console.log(num1 + num2);
+console.log(num1 - num2);
+console.log(num1 * num2);
+console.log(num1 / num2);
+console.log(num1 ** num2);
+
+// modulo => no tiene nada que ver con porcentajes
+console.log(num1 % num2); // 2 + 2 + 2 = 6 => restante: 0
+
+console.log(24  %   5) // 5 + 5 + 5 + 5 = 20 . restante: 4
+
+// para saber si un numero es par o impar
+
+console.log( 27 % 2 ) // 0=par . 1=impar
+
+
+// asignacion y matematicos
+
+let age = 35;
+
+// feliz cumpleaños
+age = age + 1
+console.log(age)
+
+// abreviaciones de sintaxis += -= *= /=
+
+age += 1
+console.log(age)
+
+// uncamente cuando son incrementos de 1;
+
+age++
+console.log(age)
+
+// todas las aperaciones anteriores hacen lo mismo.
+
+
+// COERCION => cuando JS intenta cambiar los tipos de data
+
+console.log( 3 + 5 ); // => 8
+console.log( "3" + "5" ); // => "35"
+
+console.log( "5" - "3" ) // => coercion 5. coercion 3 => 5 - 3 = 2
+
+console.log( "javascript" - "script" ) // NaN => Not A Number
+
+let someVar = NaN;
+console.log(someVar, typeof someVar)
+
+let someVar2 = Infinity;
+console.log(someVar2, typeof someVar2)
+
+console.log( "3" + 5 ) // coerciona el 5 a "5" y luego concatena
+console.log( 3 + "5" ) // coerciona el 5 a "5" y luego concatena
+
+
+// Objecto Global Math
+
+// console.log( Math.random() ) // 0 - 1
+let random10 = Math.random() * 10 // 0 - 10
+console.log( Math.floor(random10) ) // 0 - 10 sin decimales
+
+console.log( Math.floor( Math.random() * 100 )) // en una misma linea 0 - 100
